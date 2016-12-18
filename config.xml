@@ -18,6 +18,6 @@
         Sean Cahill
     </author>
 	 <!-- include the Barcode plugin  -->
-    <gap:plugin name="com.cordova.plugin.barcodescanner" />
+    <gap:plugin name="cordova.plugin.barcodescanner" />
 	
 	</widget>
