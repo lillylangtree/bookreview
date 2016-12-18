@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+    <widget xmlns   = "http://www.w3.org/ns/widgets"
+        xmlns:gap   = "http://phonegap.com/ns/1.0"
+        id          = "com.phonegap.bookscan"
+        versionCode = "10" 
+        version     = "3.0.0" >
+
+    <!-- versionCode is optional and Android only -->
+	<icon src="images/bookscan.jpg" />
+    <name>Book Scanner Application</name>
+
+    <description>
+        An app that scans a books barcode and returns description and review details. Allows
+		storage locally to smartphone.
+    </description>
+
+    <author href="http://www.nmm.ie" email="sean@nmm.ie">
+        Sean Cahill
+    </author>
+	 <!-- include the Barcode plugin  -->
+    <gap:plugin name="com.phonegap.plugins.barcodescanner" />
+	
+	</widget>
