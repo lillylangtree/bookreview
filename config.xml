@@ -9,10 +9,11 @@
 	<icon src="images/bookscan.jpg" />
     <name>Book Review Application</name>
 	<preference name="android-build-tool" value="gradle" />
-	<access origin="https://code.jquery.com*"/>
-	<access origin="https://goodreads.com*" />
-	<access origin="https://www.goodreads.com*" />
-	<access origin="https://query.yahooapis.com*"/>
+	<allow-navigation href="https://code.jquery.com/*" />
+	<allow-navigation href="https://goodreads.com/*" />
+	<allow-navigation href="https://www.goodreads.com/*" />
+	<allow-navigation href="https://query.yahooapis.com/*" />
+	 
     <description>
         An app that scans a books barcode and returns book description and review details. Allows
 		storage locally to smartphone.
