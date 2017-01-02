@@ -8,7 +8,7 @@
     <!-- versionCode is optional and Android only -->
 	<icon src="images/bookscan.jpg" />
     <name>Book Review Application</name>
-
+	<preference name="android-build-tool" value="gradle" />
     <description>
         An app that scans a books barcode and returns book description and review details. Allows
 		storage locally to smartphone.
