@@ -23,5 +23,6 @@
     </author>
 	 <!-- include the Barcode plugin  -->
 	 <plugin name="phonegap-plugin-barcodescanner" spec="6.0.5" />
+	 <plugin name="cordova-plugin-whitelist" />
 	 
 	</widget>
