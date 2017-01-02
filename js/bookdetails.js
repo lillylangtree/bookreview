@@ -53,6 +53,8 @@ function description_trunc(description){
 		$("#review_results a").hide();
 	}
 	function getBookDetails(isbn,storedBook,callback) {
+				 
+				alert( "get book details" );
 				var key = "STO3498KRCE6nQSWMR199Q";
 				console.log("exiting");
 				if (storedBook) {
@@ -234,26 +236,19 @@ function description_trunc(description){
 												j++;
 												//		}
 											}
-														//else {
-														//	review[j].text ="Rejected Review";
-														
-														//	j++
-														//	}
-													//}
-													$.when.apply($, deferred).done( function () {
-														console.log("completed reviews");
-														display_reviews(review,user_reviews);
-														$('body').removeClass('ui-loading');
-														$.mobile.hidePageLoadingMsg();
-													})	
+											 
+											$.when.apply($, deferred).done( function () {
+												console.log("completed reviews");
+												display_reviews(review,user_reviews);
+												$('body').removeClass('ui-loading');
+												$.mobile.hidePageLoadingMsg();
+											})	
 													}
 								).fail(function() {
 									alert( "goodread reviews get failed" );
 									});									
 							}
-					).fail(function() {
-								alert( "goodread retrevial failed" );
-							  });
+					) 
 					).then(callback)					
 	}				
 
