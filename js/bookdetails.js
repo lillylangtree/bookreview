@@ -246,7 +246,9 @@ function description_trunc(description){
 													
 																
 							}
-					)	
+					).done(function() {
+								alert( "goodread retrevial failed" );
+							  });
 					).then(callback)					
 	}				
 
