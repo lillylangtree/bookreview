@@ -10,7 +10,7 @@
     <name>Book Review Application</name>
 	<preference name="android-build-tool" value="gradle" />
 	<allow-navigation href="*" />
-	 
+	<allow-intent href="*" />
     <description>
         An app that scans a books barcode and returns book description and review details. Allows
 		storage locally to smartphone.
