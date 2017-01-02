@@ -81,7 +81,7 @@ function description_trunc(description){
                 $( "#isbn" ).text('isbn: ' + isbn);
 				 var url = "https://www.goodreads.com/search.xml?key=STO3498KRCE6nQSWMR199Q&q="+book.isbn;
 				$.when(
-				 $.get("http://query.yahooapis.com/v1/public/yql",
+				 $.get("https://query.yahooapis.com/v1/public/yql",
 						{
 							q: "select * from xml where url=\""+url+"\"",
 							format: "xml"
@@ -114,7 +114,7 @@ function description_trunc(description){
 								else
 										book.book_id = 	($(xml).find("best_book").find("id"))[0].innerHTML;
 							if (!imgFound) {	
-								var test_url = "http://www.goodreads.com/book/show/"+book.book_id 
+								var test_url = "https://www.goodreads.com/book/show/"+book.book_id 
 								var yql = "select * from html where url=\""+test_url+"\" and xpath=\'//img[@id=\"coverImage\"]\'"
 								$.get("https://query.yahooapis.com/v1/public/yql",
 									{
@@ -130,7 +130,7 @@ function description_trunc(description){
 							}
 							//var the_url = encodeURI("https://www.goodreads.com/book/title.xml?author="+author+"&key="+key+"&title="+title);
 							var the_url = "https://www.goodreads.com/book/show/"+book.book_id+"?format=xml&key=STO3498KRCE6nQSWMR199Q"
-							$.get("http://query.yahooapis.com/v1/public/yql",
+							$.get("https://query.yahooapis.com/v1/public/yql",
 							{
 								q: "select * from xml where url=\""+the_url+"\"",
 								format: "xml"
@@ -141,7 +141,7 @@ function description_trunc(description){
 								book.description = $(xml).find("book").find('description').text()
 								console.log("getting book rating");
 								if (!book.description || book.description == "") {
-									var test_url = "http://www.goodreads.com/book/show/"+book.book_id 
+									var test_url = "https://www.goodreads.com/book/show/"+book.book_id 
 									yql = "select * from html where url=\""+test_url+"\" and xpath=\'//div[@id=\"description\"]\'"
 									$.get("https://query.yahooapis.com/v1/public/yql",
 										{
@@ -163,7 +163,7 @@ function description_trunc(description){
 								.fail(function() {
 									alert( "goodread results retrevial failed" );
 								});
-								var review_url = "http://www.goodreads.com/book/show/"+book.book_id ;
+								var review_url = "https://www.goodreads.com/book/show/"+book.book_id ;
 								yql = "select * from html where url=\""+review_url+"\" and xpath=\'//div[@class=\"review\"]'" ;
 								 
 								/*var ryql = "select * from html where url=\""+review_url+"\" and xpath=\'//div[@class=\"reviewText stacked\"]/span/span\'"
@@ -217,7 +217,7 @@ function description_trunc(description){
 												aReview.id = review_id;
 												review[i] = aReview;
 												
-												var user_url = "http://www.goodreads.com/review/show.xml?id="+review_id+"&key=STO3498KRCE6nQSWMR199Q";
+												var user_url = "https://www.goodreads.com/review/show.xml?id="+review_id+"&key=STO3498KRCE6nQSWMR199Q";
 												uyql = "select * from html where url=\""+user_url+"\" and xpath=\'//review'" ;	
 												deferred.push($.get("https://query.yahooapis.com/v1/public/yql",
 													{
