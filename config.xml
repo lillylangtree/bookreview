@@ -11,6 +11,7 @@
 	<preference name="android-build-tool" value="gradle" />
 	<allow-navigation href="*" />
 	<allow-intent href="*" />
+	<access origin="*" />
     <description>
         An app that scans a books barcode and returns book description and review details. Allows
 		storage locally to smartphone.
@@ -21,5 +22,5 @@
     </author>
 	 <!-- include the Barcode plugin  -->
 	 <plugin name="phonegap-plugin-barcodescanner" spec="6.0.5" />
-	
+	 <plugin name="cordova-plugin-whitelist />
 	</widget>
