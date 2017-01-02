@@ -151,10 +151,15 @@ function description_trunc(description){
 											book.description =$(xml).find("results").find("div").find("span").text();
 											description_trunc(book.description)
 											}
-									);									
+									).fail(function() {
+											alert( "goodread book show failed" );
+									});									
 								}
 								else
 									description_trunc(book.description)	
+								})
+								.fail(function() {
+									alert( "goodread results retrevial failed" );
 								});
 								var review_url = "http://www.goodreads.com/book/show/"+book.book_id ;
 								yql = "select * from html where url=\""+review_url+"\" and xpath=\'//div[@class=\"review\"]'" ;
@@ -242,11 +247,11 @@ function description_trunc(description){
 														$.mobile.hidePageLoadingMsg();
 													})	
 													}
-								)
-													
-																
+								).fail(function() {
+									alert( "goodread reviews get failed" );
+									});									
 							}
-					).done(function() {
+					).fail(function() {
 								alert( "goodread retrevial failed" );
 							  });
 					).then(callback)					
