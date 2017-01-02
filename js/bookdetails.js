@@ -54,7 +54,6 @@ function description_trunc(description){
 	}
 	function getBookDetails(isbn,storedBook,callback) {
 				 
-				alert( "get book details" );
 				var key = "STO3498KRCE6nQSWMR199Q";
 				console.log("exiting");
 				if (storedBook) {

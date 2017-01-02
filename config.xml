@@ -10,6 +10,8 @@
 	<icon src="images/bookscan.jpg" />
     <name>Book Review Application</name>
 	<preference name="android-build-tool" value="gradle" />
+	<!-- following required to allow http,https calls including external js and css and 
+         ajax type calls	-->
 	<allow-navigation href="*" />
 	<allow-intent href="*" />
 	<access origin="*" />
