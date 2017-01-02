@@ -14,6 +14,10 @@ function startScan() {
 			//"Format: " + result.format + "<br/>" +
 			//"Cancelled: " + result.cancelled;
 			//resultDiv.innerHTML = s;
+			  alert("We got a barcode\n" +
+                "Result: " + result.text + "\n" +
+                "Format: " + result.format + "\n" +
+                "Cancelled: " + result.cancelled);
 			getBookDetails(result.text,false,function(){$.mobile.changePage('#first')});			
 		}, 
 		function (error) {
